@@ -4,11 +4,11 @@ html {
   
 @font-face {
     font-family: circularMedium ;
-    src: url(../fonts/Euclid\ Circular\ B\ Medium.ttf);
+    src: url(./fonts/Euclid\ Circular\ B\ Medium.ttf);
 }
 @font-face {
     font-family: circularRegular;
-    src: url(../fonts/Euclid\ Circular\ B\ Regular.ttf);
+    src: url(./fonts/Euclid\ Circular\ B\ Regular.ttf);
 }
   * {
     margin: 0;
@@ -355,3 +355,48 @@ input[type="search"]::placeholder {
    .go-pro-btn:hover{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   } 
+
+  /*............analytics main...................*/
+.analytics-main{
+  margin-top: 5.2rem;
+}
+  .analytics-container {
+    display: grid;
+    gap: 32px;
+  }
+
+.analytics-cards{
+  display: flex;
+  gap: 3.2rem;
+}
+.analytics-card{
+   border: 1px solid black;
+  gap: 3.2rem;  
+  background-color: rgba(255, 255, 255, 0.8);
+}
+  
+  
+.analytics-cards{
+
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.item1 {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+}
+
+.item2 {
+  grid-column: 3;
+  grid-row: 2 / span 2;
+}
+.item4 {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+.item3 {
+  grid-column: 1 / span 2;
+  grid-row: 3;
+}
