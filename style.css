@@ -121,6 +121,7 @@ html {
   align-items: center;
   padding: 1.6rem 2.4rem;
   gap: 2.4rem;
+  width: 44rem;
 }
 
 /* .search-btn {
@@ -160,10 +161,13 @@ input[type="search"]::placeholder {
   font-size: 1.8rem;
   line-height: 2.3rem;
   color: #35605A;
+  padding-bottom: 0.4rem;
 
+  
 }
+
   .profile-btn{
-    padding-top: 0.4rem;
+
     background-color: #35605A;
     padding: 0.4rem 0.8rem;
     gap: 1rem;
