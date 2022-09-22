@@ -202,6 +202,11 @@ input[type="search"]::placeholder {
 
 .side-bar-container{
     background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  
 
     /* display: flex;
     justify-content: space-between;
@@ -219,9 +224,9 @@ input[type="search"]::placeholder {
    max-width: 32rem;
  }  */
  
-.side-nav-menu{
+/* .side-nav-menu{
   padding-bottom: 38.5rem;
-}
+} */
 /* .main-navbar{
   padding: 2.7rem 5.2rem 1.2rem 5.2rem;
 } */
@@ -458,18 +463,20 @@ cursor: pointer;
 }
 .item4 {
   grid-column: 1 / span 2;
-  grid-row: 2;
+  grid-row: 3;
 }
 .item3 {
   grid-column: 1 / span 2;
-  grid-row: 3;
+  grid-row: 2;
   max-width: 94.4rem;
 }
 
 .my-chart{
   width: 85rem !important;
 }
-
+.balance-statistics{
+  background-color: #ffffff;
+}
 .switch {
   position: relative;
   display: inline-block;
@@ -538,4 +545,132 @@ input:checked + .slider:before {
 }
 .chart-container{
   width: 85rem;
+}
+
+
+/*.....transaction section................*/
+
+.transaction-section{
+  background-color: #ffffff;
+  width: fit-content;
+}
+
+.transaction-top{
+  display: flex;
+  justify-content: space-between;
+  padding: 3.2rem 3.2rem; align-items: center;
+}
+
+.transaction-top h3{
+  font-family: circularMedium;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  color: #35605A;
+  text-transform: uppercase;
+ 
+}
+
+.invoice-btn{
+  padding: 1.2rem 2.4rem;
+  border: 1px solid rgba(107, 129, 140, 0.2);
+  gap: 1rem;
+  border-radius: 0.8rem;
+
+  font-family: circularRegular;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #35605A;
+
+
+}
+
+table th{
+  background-color: rgba(107, 129, 140, 0.05);
+  padding: 1.4rem 3.2rem;
+  /* border: 1px solid red; */
+  gap: 0rem !important;
+  outline: none;
+}
+table td{
+  padding: 2.5rem 3.2rem;
+  border-top: 1px solid rgba(107, 129, 140, 0.1);
+}
+
+.titles th{
+  color: #6b818c;
+  font-family: circularMedium;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  letter-spacing: 4%;
+  text-transform: uppercase;
+}
+.titles{
+  background-color: rgba(107, 129, 140, 0.05);
+
+}
+
+.number{
+  font-family: circularMedium;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2rem;
+ letter-spacing: 4%;
+ color: #00120B;
+}
+
+.table-date{
+  font-family: circularRegular;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
+
+  color: #6B818C;
+
+
+}
+
+.client-name{
+  font-family: circularRegular;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
+
+  color: #00120B;
+}
+.amount{
+  font-family: circularRegular;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
+
+  letter-spacing: 4%;
+  color: #00120B;
+
+
+}
+
+.pending-btn{
+  background-color: rgba(53, 96, 90, 0.1); 
+  color: #35605A;
+}
+.complete-btn{
+  background-color: rgba(0, 189, 157, 0.1);
+  color: #00BD9D;
+  gap: 1rem;
+}
+
+.table-btn{
+  font-family: circularMedium;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  border-radius: 0.2rem;
+  padding: 0.4rem 0.8rem;
+  gap: 1rem;
+  display: flex;
+  width: fit-content;
+  text-transform: uppercase;
 }

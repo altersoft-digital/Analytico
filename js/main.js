@@ -21,27 +21,21 @@ const monthChart = new Chart(myChart, {
                 35
             ],
             backgroundColor:[
+              
                 '#D8E3E9'
             ],
     
             borderRadius:[
                 9.1
             ],
+            hoverOffset: 4,
+            hoverBackgroundColor:   '#00BD9D'
          
         }],
     },
+
+   
     options:{
-        onHover: (event, chartElement) => {
-            event.native.target.style.fill = chartElement[0] ? '#00BD9D' : '#D8E3E9';
-
-            if(chartElement.length == 1){
-                event.native.target.style.fill = '#00BD9D';
-            }
-            if(chartElement.length == 0){
-                event.native.target.style.fill = '#D8E3E9';
-            }
-
-        },
          responsive: true,
       plugins: {
         legend: {
@@ -67,7 +61,6 @@ const monthChart = new Chart(myChart, {
             ticks:{
                 display: false
             }
-
         },
         x:{
             grid:{
@@ -86,14 +79,33 @@ const monthChart = new Chart(myChart, {
     
 
 });
-const plugin = {
-    id: 'custom_canvas_background_color',
-    beforeDraw: (chart) => {
-      const {ctx} = chart;
-      ctx.save();
-      ctx.globalCompositeOperation = 'destination-over';
-      ctx.fillStyle = 'lightGreen';
-      ctx.fillRect(0, 0, chart.width, chart.height);
-      ctx.restore();
+ const tooltipLine = {
+        id: 'tooltipLine',
+        beforeDraw: chart => {
+            const myChart = chart.myChart;
+            if(chart.tooltip._active && chart.tooltip._active.length){
+                const myChart = chart.myChart;
+                myChart.save();
+                const activePoint = chart.tooltip._active[0];
+                console.log(activePoint.element.y)
+
+                myChart.beginPath();
+                myChart.setLineDash([5, 7]);
+                myChart.moveTo(activePoint.element.x, chart.chartArea.top);
+                myChart.lineTo(activePoint.element.x, activePoint.element.y);
+                myChart.lineWidth = 2;
+                myChart.strokeStyle = 'grey';
+                myChart.stroke();
+                myChart.restore();
+
+                myChart.beginPath();
+                myChart.moveTo(activePoint.element.x, activePoint.element.y);
+                myChart.lineTo(activePoint.element.x, 350);
+                myChart.lineWidth = 2;
+                myChart.strokeStyle = 'red';
+                myChart.stroke();
+                myChart.restore();
+
+            }
+        }
     }
-  };

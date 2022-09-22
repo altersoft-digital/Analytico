@@ -221,13 +221,18 @@
     <div class="card-transactions item2">
   ffffffffff
     </div>
+
      <div class="balance-statistics item3">
       <div class="statistics-top">
         <h3>balance statistics</h3>
-        <label class="switch">
+        <div class="statistic-right">
+          <label class="switch">daily
           <input type="checkbox">
           <span class="slider round"></span>
-        </label>
+          </label>
+          <img src="./images/dots.svg">
+        </div>
+        
       </div>
 
       <div class="chart-container">
@@ -235,7 +240,67 @@
       </div>
  
     </div> 
-    <div class="grid-item item4">4</div>
+
+
+
+
+
+    <div class="grid-item transaction-section item4">
+      <div class="transaction-top">
+        <h3>invoices</h3>
+        <a type="submit" class="invoice-btn">+ New Invoice</a>
+      </div>
+
+      <table>
+        <thead> 
+        <tr class="titles">
+          <th>number</th>
+          <th>date</th>
+          <th>Client name</th>
+          <th>amount</th>
+          <th>status</th>
+        </tr></thead>
+     <tbody>   <tr>
+          <td class="number">#ASC52195</td>
+          <td class="table-date">May 7, 2022</td>
+          <td class="client-name">Chris Glasser</td> 
+          <td class="amount">$2,571.21</td>
+          <td><a href="" class="pending-btn table-btn"><img src="./images/dot.svg">pending</a></td>
+        </tr>
+        <tr>
+          <td class="number">#BUK25126</td>
+          <td class="table-date">May 12, 2022</td>
+          <td class="client-name">Corina McCoy</td>
+          <td class="amount">$9,966.52</td>
+          <td><a href="" class="complete-btn table-btn"><img src="./images/gr-dot.svg">completed</a></td>
+        
+        </tr>
+        <tr>
+          <td class="number">#NAM47812</td>
+          <td class="table-date">Apr 29, 2022</td>
+          <td class="client-name">Kurt Bates</td>
+          <td class="amount">$201.79</td>
+          <td><a href="" class="complete-btn table-btn"><img src="./images/gr-dot.svg">completed</a></td>
+        
+        </tr>
+        <tr>
+          <td class="number">#ASC89715</td>
+          <td class="table-date">May 18, 2022</td>
+          <td class="client-name">Stephanie Nicol</td>
+          <td class="amount">$6,275.59</td>
+          <td><a href="" class="pending-btn table-btn"><img src="./images/dot.svg">pending</a></td>
+        
+        </tr>
+        <tr>
+          <td class="number">#PLE12485</td>
+          <td class="table-date">May 17, 2022</td>
+          <td class="client-name">Autumn Phillips</td>
+          <td class="amount">$1,415.67</td>
+          <td><a href="" class="complete-btn table-btn"><img src="./images/gr-dot.svg">completed</a></td>
+        
+        </tr></tbody> 
+      </table>
+    </div>
   
   </div>
 
