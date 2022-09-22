@@ -373,7 +373,8 @@ input[type="search"]::placeholder {
 
   /*............analytics main...................*/
 .analytics-main{
-  padding: 5.2rem;
+
+  padding: 5.2rem 5.2rem 0 5.2rem;
 }
   .analytics-container {
     display: grid;
@@ -552,7 +553,7 @@ input:checked + .slider:before {
 
 .transaction-section{
   background-color: #ffffff;
-  width: fit-content;
+  width: 100%;
 }
 
 .transaction-top{
@@ -585,13 +586,16 @@ input:checked + .slider:before {
 
 
 }
-
+table{
+  border-collapse: collapse;
+}
 table th{
   background-color: rgba(107, 129, 140, 0.05);
   padding: 1.4rem 3.2rem;
   /* border: 1px solid red; */
   gap: 0rem !important;
   outline: none;
+  border-collapse: collapse;
 }
 table td{
   padding: 2.5rem 3.2rem;
@@ -673,4 +677,104 @@ table td{
   display: flex;
   width: fit-content;
   text-transform: uppercase;
+}
+
+/*.....card-transactions......*/
+.card-transactions{
+  background-color: #ffffff;
+  margin-top: 18.2rem;
+  position: relative;
+width: 100%;
+padding: 3.2rem 2.4rem;
+}
+.card-img{
+  position:relative;
+
+}
+.images{
+  position: absolute;
+  top: -13rem;
+  left: 3.5rem;
+}
+.debit-card-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.add-card-btn{
+  width: 100%;
+  border: 2px dotted rgba(0, 189, 157, 0.2);
+  margin-top: 18.6rem;
+  border-radius: 1.2rem;
+  background-color: transparent;
+  color: #00BD9D;
+  padding: 1.2rem 16.1rem;
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+}
+.current-total{
+  margin-top: 3.4rem;
+}
+.current{
+  font-family: circularMedium;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  color: #6B818C;
+}
+.current-top,
+.transactions-top{
+  display: flex;
+  justify-content: space-between;
+}
+.last-transactions{
+  margin-top: 6.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+
+}
+.transactions-top h3{
+  color: #35605A;
+  font-family: circularMedium;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+}
+
+.current-total h1{
+  font-family: circularMedium;
+  font-weight: 500;
+  font-size: 6.4rem;
+  line-height: 8.1rem;
+  color: #00120B;
+}
+
+.transaction{
+  display: flex;
+  justify-content: space-between;
+  /* margin-top: 3.2rem; */
+  align-items: center;
+}
+
+.transaction img{
+  background-color: rgba(0, 189, 157, 0.05);
+  border-radius: 0.4rem;
+  padding: 1.6rem;
+
+}
+
+.transaction .left-side{
+  display: flex;
+  gap: 1.6rem;
+  
+}
+
+.left-side-text{
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  justify-content: center;
 }
