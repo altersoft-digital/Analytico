@@ -472,8 +472,11 @@ cursor: pointer;
   max-width: 94.4rem;
 }
 
-.my-chart{
+/* .my-chart{
   width: 85rem !important;
+} */
+canvas{
+  width: 100%;
 }
 .balance-statistics{
   background-color: #ffffff;
@@ -545,10 +548,15 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 .chart-container{
-  width: 85rem;
+ width: 100%;
 }
-
-
+#my-chart{
+  width: 100%;
+  padding: 7.1rem 4.5rem 3rem 4.4rem;
+}
+.statistics-top{
+  padding: 3.2rem 3.2rem 1.6rem 3.2rem;
+}
 /*.....transaction section................*/
 
 .transaction-section{
@@ -575,19 +583,27 @@ input:checked + .slider:before {
 .invoice-btn{
   padding: 1.2rem 2.4rem;
   border: 1px solid rgba(107, 129, 140, 0.2);
-  gap: 1rem;
+  gap: 1.3rem;
   border-radius: 0.8rem;
+display: flex;
+cursor: pointer;
+transition: .3s;
 
-  font-family: circularRegular;
+}
+.invoice-btn:hover{
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+.invoice-btn h3{
+    font-family: circularRegular;
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 1.8rem;
   color: #35605A;
 
-
 }
 table{
   border-collapse: collapse;
+  width: 100%;
 }
 table th{
   background-color: rgba(107, 129, 140, 0.05);
@@ -596,20 +612,27 @@ table th{
   gap: 0rem !important;
   outline: none;
   border-collapse: collapse;
-}
-table td{
-  padding: 2.5rem 3.2rem;
-  border-top: 1px solid rgba(107, 129, 140, 0.1);
-}
 
-.titles th{
-  color: #6b818c;
+text-align: start;
+color: #6b818c;
   font-family: circularMedium;
   font-weight: 500;
   font-size: 1.4rem;
   line-height: 1.8rem;
   letter-spacing: 4%;
   text-transform: uppercase;
+}
+table td{
+  padding: 2.6rem 3.2rem 2.5rem 3.2rem;
+  /* border-top: 1px solid rgba(107, 129, 140, 0.1); */
+
+}
+table thead tr:first-child{
+  border-bottom: 1px solid #D4EEDF;
+}
+table tr{
+  border-bottom: 1px solid rgba(107, 129, 140, 0.1);
+
 }
 .titles{
   background-color: rgba(107, 129, 140, 0.05);
@@ -659,12 +682,22 @@ table td{
 .pending-btn{
   background-color: rgba(53, 96, 90, 0.1); 
   color: #35605A;
+  transition: .2s;
 }
 .complete-btn{
   background-color: rgba(0, 189, 157, 0.1);
   color: #00BD9D;
   gap: 1rem;
 }
+
+.pending-btn:hover{
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+.complete-btn:hover{
+
+  box-shadow: rgba(5, 101, 85, 0.1) -4px 9px 25px -6px;
+}
+
 
 .table-btn{
   font-family: circularMedium;
@@ -683,6 +716,7 @@ table td{
 .card-transactions{
   background-color: #ffffff;
   margin-top: 18.2rem;
+  margin-bottom: 3.2rem;
   position: relative;
 width: 100%;
 padding: 3.2rem 2.4rem;
@@ -691,16 +725,13 @@ padding: 3.2rem 2.4rem;
   position:relative;
 
 }
-.images{
-  position: absolute;
-  top: -13rem;
-  left: 3.5rem;
-}
+
 .debit-card-img{
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -15.4rem;
+  left: 3.5rem;
 }
+
 .add-card-btn{
   width: 100%;
   border: 2px dotted rgba(0, 189, 157, 0.2);
