@@ -450,7 +450,8 @@ cursor: pointer;
 .debt-info h2{
   padding-top: 0rem !important;
 }
-.dots{
+.dots,
+.arrow-right{
   cursor: pointer;
 }
 .item1 {
@@ -735,7 +736,7 @@ padding: 3.2rem 2.4rem;
 .add-card-btn{
   width: 100%;
   border: 2px dotted rgba(0, 189, 157, 0.2);
-  margin-top: 18.6rem;
+  margin-top: 15.6rem;
   border-radius: 1.2rem;
   background-color: transparent;
   color: #00BD9D;
@@ -744,6 +745,14 @@ padding: 3.2rem 2.4rem;
   gap: 0.8rem;
   justify-content: center;
   align-items: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .3s;
+}
+.add-card-btn:hover{
+  border: 2px solid rgba(0, 189, 157, 0.2);
+  box-shadow: rgba(16, 73, 63, 0.1) -4px 9px 25px -6px;
+ 
 }
 .current-total{
   margin-top: 3.4rem;
@@ -808,4 +817,29 @@ padding: 3.2rem 2.4rem;
   flex-direction: column;
   gap: 0.4rem;
   justify-content: center;
+}
+
+.left-side-text h4{ 
+  font-family: circularMedium;
+  font-weight: 500;
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+  color: #00120B;
+}
+.left-side-text h6{
+  font-family: circularRegular;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+   color: #6B818C;
+}
+.transaction-amount{
+  font-family: circularMedium;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  color: #6B818C;
+}
+.transaction-amount.plus{
+  color: #00BD9D;
 }
