@@ -46,7 +46,7 @@ html {
   .header {
     position: relative;
     transition: .2s;  
-  
+  width: 100%;
    /* padding-bottom: 2rem;  padding-top:0.5rem; */
    background: #ffffff;
   
@@ -114,6 +114,138 @@ html {
     justify-content: flex-end;
 
    }
+
+   /*....................*/
+   .header input[type="checkbox"],
+   .header .hamburger-lines {
+     display: none;
+   }
+
+
+   
+@media (max-width: 1200px) {
+  .side-bar{
+    display: none;
+  }
+  .main-section{
+    display: grid;
+    grid-template-columns: auto;
+
+  }
+  .analytics-cards{
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+  }  
+  .analityc-bottom {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .header{
+    opacity: 0.95;
+  }
+
+  .side-bar-container input[type="checkbox"],
+  .side-bar-container .hamburger-lines {
+    display: block;
+  }
+
+  .side-bar-container {
+    display: block;
+    position: relative;
+    height: 64px;
+  }
+
+  .side-bar-container input[type="checkbox"] {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 30px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+  }
+
+  .side-bar-container .hamburger-lines {
+    display: block;
+    height: 23px;
+    width: 35px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .side-bar-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #333;
+  }
+
+  .side-bar-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .side-bar-container  .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .side-bar-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+.side-bar-container {
+    padding-top: 100px;
+    background: #fff;
+    height: 100vh;
+    max-width: 300px;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 5px 0px 10px 0px #aaa;
+  }
+
+ .side-bar-container li {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  /* .logo {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 2rem;
+  } */
+
+  .side-bar-container  input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+
+  .side-bar-container  input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(35deg);
+  }
+
+  .side-bar-container  input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  .side-bar-container  input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-35deg);
+  }
+
+}
 
    /*...search....*/
    .search {
@@ -481,24 +613,162 @@ canvas{
 }
 .balance-statistics{
   background-color: #ffffff;
+  width: 100%;
 }
-.switch {
+.statistic-right{
+  display: flex;
+  gap: 2.4rem;
+}
+/* .switch {
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
 }
 
-/* Hide default HTML checkbox */
+
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
+} */
+
+
+div.btn-container{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+
 }
+label {
+  font-size: 13px;
+  color: #424242;
+  font-weight: 500;
+}
+
+.btn-color-mode-switch{
+  display: inline-block;
+  margin: 0px;
+  position: relative;  border: 0.5px solid rgba(107, 129, 140, 0.2);
+  border-radius: 4.7rem;
+
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner{
+  margin: 0px;
+  width: 140px;
+  height: 30px;
+  background: #F4FBF7;
+  border-radius: 26px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+  /*box-shadow: 0px 0px 8px 0px rgba(17, 17, 17, 0.34) inset;*/  padding: 1rem 1.4rem; 
+  display: block;
+  font-size: 1.4rem;
+font-family: circularRegular;
+font-weight: 400;
+line-height: 1.8rem;
+color: #35605A;
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner:before{
+  content: attr(data-on);
+  position: absolute;
+  font-size: 12px;
+  font-weight: 500;
+  top: 7px;
+  right: 20px;
+
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner:after{
+  content: attr(data-off);
+  width: 70px;
+  height: 16px;
+  background: #35605A;
+  border-radius: 26px;
+  color:  #F4FBF7;
+   
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 6px -2px #111;
+  padding: 5px 0px;
+}
+
+/* .btn-color-mode-switch > .alert{
+  display: none;
+  background: #FF9800;
+  border: none;
+  color:
+} */
+
+.btn-color-mode-switch input[type="checkbox"]{
+  cursor: pointer;
+  width: 50px;
+  height: 25px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  margin: 0px;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner{
+  background: #151515;
+  color:  #F4FBF7;
+
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:after{
+  content: attr(data-on);
+  left: 68px;
+  background:#35605A;
+  color:  #F4FBF7;
+  font-size: 1.4rem;
+font-family: circularRegular;
+font-weight: 400;
+line-height: 1.8rem;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:before{
+  content: attr(data-off);
+  right: auto;
+  left: 20px;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner{
+  background: #F4FBF7; 
+color: #35605A;
+font-size: 1.4rem;
+font-family: circularRegular;
+font-weight: 400;
+line-height: 1.8rem;
+
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked ~ .alert{
+  display: block;
+}
+
+
+
 
 .statistics-top{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;  
+  padding: 3.2rem 3.2rem 1.6rem 3.2rem;
+}
+.statistics-top h3{
+  text-transform: uppercase;
+  font-family: circularMedium;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  color: #35605A;
 }
 
 /* The slider */
@@ -555,9 +825,7 @@ input:checked + .slider:before {
   width: 100%;
   padding: 7.1rem 4.5rem 3rem 4.4rem;
 }
-.statistics-top{
-  padding: 3.2rem 3.2rem 1.6rem 3.2rem;
-}
+
 /*.....transaction section................*/
 
 .transaction-section{
@@ -731,6 +999,7 @@ padding: 3.2rem 2.4rem;
   position: absolute;
   top: -15.4rem;
   left: 3.5rem;
+  width: 100%;
 }
 
 .add-card-btn{

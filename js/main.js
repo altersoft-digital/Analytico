@@ -1,3 +1,12 @@
+Chart.defaults.font.size = 16;
+Chart.defaults.font.wight = 500;
+// Chart.defaults.line.height = 23;
+Chart.defaults.color = "#D8E3E9";
+Chart.defaults.gap = 23;
+
+
+
+
 let myChart = document.getElementById('my-chart').getContext('2d');
 
 const monthChart = new Chart(myChart, {
@@ -5,20 +14,20 @@ const monthChart = new Chart(myChart, {
     data: {
         labels:['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets:[{
-            label: 'Months',
+            label: 'From # k $',
             data:[
                 10,
-                20,
-                50,
-                90,
-                70,
-                60,
-                34,
-                20,
-                45,
-                60,
-                20,
-                35
+                17,
+                8,
+                12,
+                8,
+                12,
+                8,
+                6,
+                12,
+                17,
+                12,
+                11
             ],
             backgroundColor:[
               
@@ -42,11 +51,16 @@ const monthChart = new Chart(myChart, {
           position: 'top',
         },
         title: {
-          display: true,
-          text: 'Chart.js Bar Chart'
+          display: false,
+          
         },
+        subtitle: {
+            display:false
+        }
        
       },
+    
+    
       scales:{
         y:{
             beginAtZero: true,
@@ -59,7 +73,13 @@ const monthChart = new Chart(myChart, {
             
             },
             ticks:{
-                display: false
+                display: false,
+                
+                    // backdropPadding: {
+                    //     y:20,
+
+                    
+                // }
             }
         },
         x:{
@@ -109,3 +129,28 @@ const monthChart = new Chart(myChart, {
             }
         }
     }
+
+
+
+
+
+
+
+
+
+    $(document).ready(function() {
+        $("#color_mode").on("change", function () {
+            colorModePreview(this);
+        })
+    });
+    
+    // function colorModePreview(ele) {
+    //     if($(ele).prop("checked") == true){
+    //         $('body').addClass('dark-preview');
+    //         $('body').removeClass('white-preview');
+    //     }
+    //     else if($(ele).prop("checked") == false){
+    //         $('body').addClass('white-preview');
+    //         $('body').removeClass('dark-preview');
+    //    }   }
+  

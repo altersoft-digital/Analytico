@@ -13,9 +13,19 @@
   <header class="header">
    
     <div class="tablet-margin header-box">
+      
+      <input type="checkbox" name="" id="">
+      <div class="hamburger-lines">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+      </div>
+
       <a href="#" class="logo"><img class="logo-img" src="./images/Frame.svg" /><span>Analityco.</span></a>
 
       <nav class="main-nav">
+
+
      
         <div class="dashboard">
         
@@ -299,10 +309,19 @@
       <div class="statistics-top">
         <h3>balance statistics</h3>
         <div class="statistic-right">
-          <label class="switch">daily
+          <!-- <label class="switch">
           <input type="checkbox">
           <span class="slider round"></span>
-          </label>
+          </label> -->
+         <div class="btn-container">
+               <label class="switch btn-color-mode-switch">
+                <input type="checkbox" name="color_mode" id="color_mode" value="1">
+                <label for="color_mode" data-on="Monthly" data-off="Daily" class="btn-color-mode-switch-inner"></label>
+            </label>
+        
+         </div>
+     
+
           <img src="./images/dots.svg">
         </div>
         
@@ -318,7 +337,7 @@
 
 
 
-    <div class="grid-item transaction-section item4">
+    <div class="grid-item transaction-section item4" style="overflow-x:auto;">
       <div class="transaction-top">
         <h3>invoices</h3>
         <div class="invoice-btn">
@@ -328,7 +347,7 @@
         </div>
       </div>
 
-      <table>
+      <table style="overflow-x:auto;">
         <thead> 
         <tr class="titles">
           <th>number</th>
@@ -389,6 +408,7 @@
 
    
   </main>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer">
    </script>
