@@ -378,7 +378,14 @@ input[type="search"]::placeholder {
   .nav-link svg path{
     transition: 0.3s;
   }
+  .nav-link{
+    width: 100%;
+  }
 
+  .side-bar-container .nav-link:hover{
+   border-right: 1px solid red;
+   /* clip-path: polygon(85% 0, 100% 0%, 100% 100%, 84% 99%, 74% 51%); */
+  } 
 
   /* .side-bar{
     display: flex;
@@ -830,7 +837,7 @@ input:checked + .slider:before {
 
 .transaction-section{
   background-color: #ffffff;
-  width: 100%;
+
 }
 
 .transaction-top{
@@ -872,7 +879,7 @@ transition: .3s;
 }
 table{
   border-collapse: collapse;
-  width: 100%;
+
 }
 table th{
   background-color: rgba(107, 129, 140, 0.05);
@@ -1111,4 +1118,13 @@ padding: 3.2rem 2.4rem;
 }
 .transaction-amount.plus{
   color: #00BD9D;
+}
+
+/*  */
+
+.my-chart{
+  display: block;
+  box-sizing: border-box;
+  height: 472px;
+  width: 100% !important;
 }
