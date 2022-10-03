@@ -3,7 +3,7 @@ Chart.defaults.font.wight = 500;
 // Chart.defaults.line.height = 23;
 Chart.defaults.color = "#D8E3E9";
 Chart.defaults.gap = 23;
-// Chart.defaults.title.hover.color = "#00BD9D";
+Chart.defaults.hover.color = "#00BD9D";
 let delayed;
 
 let myChart = document.getElementById("my-chart").getContext("2d");
@@ -44,6 +44,7 @@ const monthChart = new Chart(myChart, {
 
     responsive: true,
     plugins: {
+      
       legend: {
         display: false,
       },
@@ -80,24 +81,25 @@ const monthChart = new Chart(myChart, {
       y: {
         display: false,
 
-        ticks: {
-          display: false,
+        // ticks: {
+        //   display: false,
 
     
-        },
+        // },
       },
       x: {
         grid: {
-          drawTicks: false,
-        //   display: false,
+          // drawTicks: false,
+          display: false,
           drawBorder: false,
           drawOnChartArea: false,
-          marginLeft: 50,
+          // marginLeft: 50,
           lineWidth: 5,
         },
       },
     },
   },
+
 });
 
 const tooltipLine = {
@@ -115,17 +117,17 @@ const tooltipLine = {
       myChart.moveTo(activePoint.element.x, chart.chartArea.top);
       myChart.lineTo(activePoint.element.x, activePoint.element.y);
       myChart.lineWidth = 2;
-      myChart.strokeStyle = "grey";
+      myChart.strokeStyle = "#00BD9D";
       myChart.stroke();
       myChart.restore();
 
-      myChart.beginPath();
-      myChart.moveTo(activePoint.element.x, activePoint.element.y);
-      myChart.lineTo(activePoint.element.x, 350);
-      myChart.lineWidth = 2;
-      myChart.strokeStyle = "red";
-      myChart.stroke();
-      myChart.restore();
+      // myChart.beginPath();
+      // myChart.moveTo(activePoint.element.x, activePoint.element.y);
+      // myChart.lineTo(activePoint.element.x, 350);
+      // myChart.lineWidth = 2;
+      // myChart.strokeStyle = "red";
+      // myChart.stroke();
+      // myChart.restore();
     }
   },
 };
