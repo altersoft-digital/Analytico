@@ -258,10 +258,6 @@ input[type="search"]::placeholder {
     width: 100%;
   }
 
-  .side-bar-container .nav-link:hover{
-   border-right: 1px solid red;
-   /* clip-path: polygon(85% 0, 100% 0%, 100% 100%, 84% 99%, 74% 51%); */
-  } 
 
   /* .side-bar{
     display: flex;
@@ -333,7 +329,14 @@ input[type="search"]::placeholder {
   
   
   }
-  
+/* 
+  .canvasjs-chart-credit{
+    display: none;
+  }
+   */
+ canvas{
+  z-index: 999999 !important; 
+ }
   .nav-link{
     display: flex;
     align-items: center;
@@ -356,13 +359,11 @@ input[type="search"]::placeholder {
   .nav-link:hover,
   .nav-link:active {
     color: #00120B;
+   border-right: 2px solid #00BD9D;
+
   }
 
-  .nav-link:hover .nav-icon svg path{
-    fill: #00BD9D;
-    background-color: #00BD9D;
-  
-  }
+ 
     .nav-link.active{
      color: #00120B;
     
@@ -388,15 +389,35 @@ input[type="search"]::placeholder {
 
   /*............analytics main...................*/
 .analytics-main{
-
+  display: grid;
+  gap: 32px;
   padding: 5.2rem 5.2rem 0 5.2rem;
 }
-  .analytics-container {
-    display: grid;
-    gap: 32px;
-    
-  }
 
+.analytics-cards{
+  grid-column: 1 / span 3;
+  grid-row: 1;
+}
+.card-transactions{
+  grid-column: 3;
+  grid-row: 2 / span 2;
+  max-width: 52rem;
+}
+
+.balance-statistics{
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  max-width: 94.4rem;
+}
+
+.transaction-section{
+  grid-column: 1 / span 2;
+  grid-row: 3;
+  max-width: 94.4rem;
+
+}
+
+/* 
   .analytics-cards-section{
     grid-column: 1 / span 3;
     grid-row: 1;
@@ -404,21 +425,32 @@ input[type="search"]::placeholder {
   .card-transactions{
     grid-column: 3;
   grid-row: 2 / span 3;
+
   }
 .chart-table-section{
   grid-column: 1 / span 2;
   grid-row: 2 / span 3;
   gap: 3.2rem;
-  gap: 3.2rem;
+
   display: flex;
   flex-direction: column;
+  max-width: 94.4rem;
 
 }
-
+.analytic-bottom{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+*/
+.transaction-bottom{
+  gap: 3.2rem;
+display: flex; 
+padding: 3.2rem 0 0;
+}
 .analytics-cards{
   display: flex;
   gap: 3.2rem;
- 
+  
 }
 .analytics-card{
    /* border: 1px solid black; */
@@ -536,12 +568,19 @@ canvas{
 } */
 
 
-div.btn-container{
+/* div.btn-container{
   display: table-cell;
   vertical-align: middle;
   text-align: center;
 
-}
+} */
+.transaction-section table {
+  overflow-x: scroll;
+
+    overflow:auto;
+ 
+  }
+
 label {
   font-size: 13px;
   color: #424242;
@@ -725,7 +764,7 @@ input:checked + .slider:before {
 }
 #my-chart{
   width: 100%;
-  padding: 7.1rem 4.5rem 3rem 4.4rem;
+  padding: 5rem 4.5rem 3rem 4.4rem;
 }
 
 /*.....transaction section................*/
@@ -877,6 +916,15 @@ table tr{
   text-transform: uppercase;
 }
 
+
+.chart-table{
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  width: 100%;
+  max-width: 94.4rem;
+}
+
 /*.....card-transactions......*/
 .card-transactions{
   background-color: #ffffff;
@@ -884,11 +932,16 @@ table tr{
   margin-bottom: 3.2rem;
   position: relative;
 width: 100%;
+/* max-width: 52rem; */
 padding: 3.2rem 2.4rem;
 }
 .card-img{
   position:relative;
 
+}
+.card-transactions-container{
+  max-width: 47.2rem;
+  width: 100%;
 }
 
 .debit-card-img{
@@ -901,11 +954,11 @@ padding: 3.2rem 2.4rem;
 .add-card-btn{
   width: 100%;
   border: 2px dotted rgba(0, 189, 157, 0.2);
-  margin-top: 15.6rem;
+  margin-top: 17.4rem;
   border-radius: 1.2rem;
   background-color: transparent;
   color: #00BD9D;
-  padding: 1.2rem 16.1rem;
+  padding: 1.2rem 0rem;
   display: flex;
   gap: 0.8rem;
   justify-content: center;
@@ -913,6 +966,8 @@ padding: 3.2rem 2.4rem;
   text-transform: uppercase;
   cursor: pointer;
   transition: .3s;
+  
+  font-size: 1.4rem;
 }
 .add-card-btn:hover{
   border: 2px solid rgba(0, 189, 157, 0.2);
@@ -922,12 +977,22 @@ padding: 3.2rem 2.4rem;
 .current-total{
   margin-top: 3.4rem;
 }
+.current-total h1{
+  font-family: circularMedium;
+  font-weight: 500;
+  font-size: 6.4rem;
+  line-height: 8.1rem;
+  color: #00120B; 
+   padding-top: 1.2rem;
+}
+
 .current{
   font-family: circularMedium;
   font-weight: 500;
   font-size: 1.8rem;
   line-height: 2.3rem;
   color: #6B818C;
+
 }
 .current-top,
 .transactions-top{
@@ -949,18 +1014,11 @@ padding: 3.2rem 2.4rem;
   line-height: 2.3rem;
 }
 
-.current-total h1{
-  font-family: circularMedium;
-  font-weight: 500;
-  font-size: 6.4rem;
-  line-height: 8.1rem;
-  color: #00120B;
-}
 
 .transaction{
   display: flex;
   justify-content: space-between;
-  /* margin-top: 3.2rem; */
+
   align-items: center;
 }
 

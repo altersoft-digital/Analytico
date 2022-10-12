@@ -9,25 +9,26 @@
     <link rel="stylesheet" href="./queries.css" />
   </head>
   <body>
-
-
     <header class="header">
       <div class="tablet-margin header-box">
-
         <div class="mobile-top">
+          <button class="btn-mobile-nav">
+            <ion-icon
+              class="icon-mobile-nav open"
+              name="menu-outline"
+            ></ion-icon>
+            <ion-icon
+              class="icon-mobile-nav close"
+              name="close-outline"
+            ></ion-icon>
+          </button>
 
-  
-    <button class="btn-mobile-nav">
-          <ion-icon class="icon-mobile-nav open" name="menu-outline"></ion-icon>
-          <ion-icon  class="icon-mobile-nav close" name="close-outline"></ion-icon>
-        </button>
-        
-        <a href="#" class="logo"
-          ><img class="logo-img" src="./images/Frame.svg" /><span
-            >Analityco.</span
-          ></a
-        >
-      </div>
+          <a href="#" class="logo"
+            ><img class="logo-img" src="./images/Frame.svg" /><span
+              >Analityco.</span
+            ></a
+          >
+        </div>
         <nav class="main-nav">
           <div class="dashboard">
             <img src="./images/arrow-right.svg" /><span>Dashboard</span>
@@ -63,16 +64,12 @@
             </div>
           </div>
         </nav>
-        
-    
-
       </div>
     </header>
 
 
 
     <main class="main-section">
-
 
       <section class="side-bar">
         <div class="side-bar-container">
@@ -239,14 +236,14 @@
         </div>
       </section>
 
-      <section class="analytics-main">
+
+      <section class="analytics-main grid-item ">
+
+        <div class="analytics-container ">
 
 
-
-        <div class="analytics-container">
-
-
-          <div class="grid-item item1 analytics-cards-section">
+     
+            
             <div class="analytics-cards">
               <div class="analytics-card">
                 <div class="transfer-card-imgs">
@@ -298,232 +295,209 @@
                 </div>
               </div>
             </div>
-          </div>
+     
+            <div class="transaction-bottom">
+       
+       
 
-          <div class="card-transactions item2">
-            <!-- <img class="card-img" src="./images/bg-card.png"> -->
-            <!-- <img class="debit-card-img"src="./images"> -->
-            <div class="card-transactions-container">
+            <div class="chart-table">
 
-         
+              <div class="balance-statistics">
+                <div class="statistics-top">
+                  <h3 class="heading-secondary">Balance Statistics</h3>
+                  <div class="statistic-right">
+                    <div class="btn-container">
+                      <label class="switch btn-color-mode-switch">
+                        <input
+                          type="checkbox"
+                          name="color_mode"
+                          id="color_mode"
+                          value="1"
+                        />
+                        <label
+                          for="color_mode"
+                          data-on="Monthly"
+                          data-off="Daily"
+                          class="btn-color-mode-switch-inner"
+                        ></label>
+                      </label>
+                    </div>
 
-            <div class="top-side">
-
-            
-            <img class="debit-card-img" src="./images/debit card.png" />
-
-            <button class="add-card-btn">
-              <img src="./images/plus.svg" />add new card
-            </button>
-</div>
-<div class="bottom-side">
-
-
-            <div class="current-total">
-              <div class="current-top">
-                <h3 class="current">current total</h3>
-                <img class="dots" src="./images/dots.svg" />
-              </div>
-
-              <h1>$25,201</h1>
-            </div>
-
-            <div class="last-transactions">
-              <div class="transactions-top">
-                <h3>last transactions</h3>
-                <img class="arrow-right" src="./images/arrow-right.svg" />
-              </div>
-
-              <div class="transaction">
-                <div class="left-side">
-                  <img src="./images/internet-bill-icon.svg" />
-                  <div class="left-side-text">
-                    <h4>Internet Bill</h4>
-                    <h6>Successfully</h6>
+                    <img class="dots" src="./images/dots.svg" />
                   </div>
                 </div>
-                <div class="right-side">
-                  <h5 class="transaction-amount">- $209</h5>
+                <div>
+                  <canvas id="my-chart"></canvas>
                 </div>
               </div>
 
-              <div class="transaction">
-                <div class="left-side">
-                  <img src="./images/ascended-salary-icon.svg" />
-                  <div class="left-side-text">
-                    <h4>Ascended Salary</h4>
-                    <h6>Successfully</h6>
+              <div class=" transaction-section"
+                style="overflow-x: auto"
+              >
+                <div class="transaction-top">
+                  <h3>invoices</h3>
+                  <div class="invoice-btn">
+                    <img src="./images/Vector.svg" />
+                    <h3>Invoice</h3>
                   </div>
                 </div>
-                <div class="right-side">
-                  <h5 class="transaction-amount plus">+ $7,000</h5>
+
+                <div>
+                  <table class="transaction-table">
+                    <thead>
+                      <tr class="titles">
+                        <th>number</th>
+                        <th>date</th>
+                        <th>Client name</th>
+                        <th>amount</th>
+                        <th>status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="number">#ASC52195</td>
+                        <td class="table-date">May 7, 2022</td>
+                        <td class="client-name">Chris Glasser</td>
+                        <td class="amount">$2,571.21</td>
+                        <td>
+                          <a href="" class="pending-btn table-btn"
+                            ><img src="./images/dot.svg" />pending</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="number">#BUK25126</td>
+                        <td class="table-date">May 12, 2022</td>
+                        <td class="client-name">Corina McCoy</td>
+                        <td class="amount">$9,966.52</td>
+                        <td>
+                          <a href="" class="complete-btn table-btn"
+                            ><img src="./images/gr-dot.svg" />completed</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="number">#NAM47812</td>
+                        <td class="table-date">Apr 29, 2022</td>
+                        <td class="client-name">Kurt Bates</td>
+                        <td class="amount">$201.79</td>
+                        <td>
+                          <a href="" class="complete-btn table-btn"
+                            ><img src="./images/gr-dot.svg" />completed</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="number">#ASC89715</td>
+                        <td class="table-date">May 18, 2022</td>
+                        <td class="client-name">Stephanie Nicol</td>
+                        <td class="amount">$6,275.59</td>
+                        <td>
+                          <a href="" class="pending-btn table-btn"
+                            ><img src="./images/dot.svg" />pending</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="number">#PLE12485</td>
+                        <td class="table-date">May 17, 2022</td>
+                        <td class="client-name">Autumn Phillips</td>
+                        <td class="amount">$1,415.67</td>
+                        <td>
+                          <a href="" class="complete-btn table-btn"
+                            ><img src="./images/gr-dot.svg" />completed</a
+                          >
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
+              
+              </div>
+          
+              <div class="card-transactions">
+              <!-- <img class="card-img" src="./images/bg-card.png"> -->
+              <!-- <img class="debit-card-img"src="./images"> -->
+              <div class="card-transactions-container">
+                <div class="top-side">
+                  <img class="debit-card-img" src="./images/debit card.png" />
 
-              <div class="transaction">
-                <div class="left-side">
-                  <img src="./images/dribbble-business-icon.svg" />
-                  <div class="left-side-text">
-                    <h4>Dribble Business</h4>
-                    <h6>Successfully</h6>
+                  <button class="add-card-btn">
+                    <img src="./images/plus.svg" />add new card
+                  </button>
+                </div>
+                <div class="bottom-side">
+                  <div class="current-total">
+                    <div class="current-top">
+                      <h3 class="current">current total</h3>
+                      <img class="dots" src="./images/dots.svg" />
+                    </div>
+
+                    <h1>$25,201</h1>
+                  </div>
+
+                  <div class="last-transactions">
+                    <div class="transactions-top">
+                      <h3>last transactions</h3>
+                      <img class="arrow-right" src="./images/arrow-right.svg" />
+                    </div>
+
+                    <div class="transaction">
+                      <div class="left-side">
+                        <img src="./images/internet-bill-icon.svg" />
+                        <div class="left-side-text">
+                          <h4>Internet Bill</h4>
+                          <h6>Successfully</h6>
+                        </div>
+                      </div>
+                      <div class="right-side">
+                        <h5 class="transaction-amount">- $209</h5>
+                      </div>
+                    </div>
+
+                    <div class="transaction">
+                      <div class="left-side">
+                        <img src="./images/ascended-salary-icon.svg" />
+                        <div class="left-side-text">
+                          <h4>Ascended Salary</h4>
+                          <h6>Successfully</h6>
+                        </div>
+                      </div>
+                      <div class="right-side">
+                        <h5 class="transaction-amount plus">+ $7,000</h5>
+                      </div>
+                    </div>
+
+                    <div class="transaction">
+                      <div class="left-side">
+                        <img src="./images/dribbble-business-icon.svg" />
+                        <div class="left-side-text">
+                          <h4>Dribble Business</h4>
+                          <h6>Successfully</h6>
+                        </div>
+                      </div>
+                      <div class="right-side">
+                        <h5 class="transaction-amount">- $150</h5>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="right-side">
-                  <h5 class="transaction-amount">- $150</h5>
-                </div>
-              </div>
-            </div>   </div>
-          </div></div>
-
-          <div class="chart-table-section">
-
-        
-          <div class="balance-statistics item3">
-            <div class="statistics-top">
-              <h3>balance statistics</h3>
-              <div class="statistic-right">
-                <!-- <label class="switch">
-          <input type="checkbox">
-          <span class="slider round"></span>
-          </label> -->
-                <div class="btn-container">
-                  <label class="switch btn-color-mode-switch">
-                    <input
-                      type="checkbox"
-                      name="color_mode"
-                      id="color_mode"
-                      value="1"
-                    />
-                    <label
-                      for="color_mode"
-                      data-on="Monthly"
-                      data-off="Daily"
-                      class="btn-color-mode-switch-inner"
-                    ></label>
-                  </label>
-                </div>
-
-                <img src="./images/dots.svg" />
               </div>
             </div>
+      </div>
 
-            <div class="chart-container">
-              <canvas id="my-chart" width="100%"></canvas>
-            </div>
-          </div>
-
-          <div class="grid-item transaction-section item4" style="overflow-x: auto">
-            <div class="transaction-top">
-              <h3>invoices</h3>
-              <div class="invoice-btn">
-                <img src="./images/Vector.svg" />
-                <h3>Invoice</h3>
-              </div>
-            </div>
-
-            <div style="overflow-x: auto"> 
-            <table>
-              <thead>
-                <tr class="titles">
-                  <th>number</th>
-                  <th>date</th>
-                  <th>Client name</th>
-                  <th>amount</th>
-                  <th>status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="number">#ASC52195</td>
-                  <td class="table-date">May 7, 2022</td>
-                  <td class="client-name">Chris Glasser</td>
-                  <td class="amount">$2,571.21</td>
-                  <td>
-                    <a href="" class="pending-btn table-btn"
-                      ><img src="./images/dot.svg" />pending</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td class="number">#BUK25126</td>
-                  <td class="table-date">May 12, 2022</td>
-                  <td class="client-name">Corina McCoy</td>
-                  <td class="amount">$9,966.52</td>
-                  <td>
-                    <a href="" class="complete-btn table-btn"
-                      ><img src="./images/gr-dot.svg" />completed</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td class="number">#NAM47812</td>
-                  <td class="table-date">Apr 29, 2022</td>
-                  <td class="client-name">Kurt Bates</td>
-                  <td class="amount">$201.79</td>
-                  <td>
-                    <a href="" class="complete-btn table-btn"
-                      ><img src="./images/gr-dot.svg" />completed</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td class="number">#ASC89715</td>
-                  <td class="table-date">May 18, 2022</td>
-                  <td class="client-name">Stephanie Nicol</td>
-                  <td class="amount">$6,275.59</td>
-                  <td>
-                    <a href="" class="pending-btn table-btn"
-                      ><img src="./images/dot.svg" />pending</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td class="number">#PLE12485</td>
-                  <td class="table-date">May 17, 2022</td>
-                  <td class="client-name">Autumn Phillips</td>
-                  <td class="amount">$1,415.67</td>
-                  <td>
-                    <a href="" class="complete-btn table-btn"
-                      ><img src="./images/gr-dot.svg" />completed</a
-                    >
-                  </td>
-                </tr>
-              </tbody>
-            </table></div>
-          </div>
-          </div>
-        
-        </div>
-
-
+  
       </section>
 
 
     </main>
 
 
-
-
-
-
-
-
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
-
-
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"
-      integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="js/main.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
