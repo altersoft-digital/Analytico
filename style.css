@@ -219,7 +219,7 @@ input[type="search"]::placeholder {
     /* display: flex;
     justify-content: space-between;
     flex-direction: column; */
-    padding: 6rem 5.2rem ;
+    /* padding: 6rem 5.2rem ; */
 
 }
  /* .side-bar{
@@ -280,6 +280,7 @@ input[type="search"]::placeholder {
     border-radius: 0.8rem;
     text-align: center;
     max-width: 21.6rem;
+    margin: 0 5.2rem;
     }
  
     .pro-card h3{
@@ -301,18 +302,30 @@ input[type="search"]::placeholder {
   .side-nav-list{
     display: flex;
     flex-direction: column;
-    gap: 5.4rem;
+    gap: 3.4rem;
   }
   
   
-/*     
-  .nav-item{
-      padding-top: 5.4rem ;
+    .nav-item{
+      display: flex;
+    }
+  .nav-item .nav-link{
+      padding: 0 5.2rem;
+      /* display: flex; */
 
     }
-    .nav-item:nth-child(1){
+        
+    /* .nav-item:hover{
+    border-right: 1px solid red;
+  
+      } */
+    /* .nav-item:nth-child(1){
       padding-top: 0rem ;
     } */
+
+    .side-nav-menu{
+      margin-top: 6rem;
+    }
 
 
  
@@ -322,13 +335,13 @@ input[type="search"]::placeholder {
  padding-bottom: 6.6rem;
     
   }
-  
+/*   
   .side-nav-list.second-menu .nav-item:nth-child(1){
   
   padding-top:0rem;
   
   
-  }
+  } */
 /* 
   .canvasjs-chart-credit{
     display: none;
@@ -352,18 +365,42 @@ input[type="search"]::placeholder {
   .nav-link:visited {
     text-decoration: none;
     transition: all 0.3s;
+    
   }
-  
-  
   
   .nav-link:hover,
-  .nav-link:active {
+  .nav-link:active{
     color: #00120B;
-   border-right: 2px solid #00BD9D;
+  }
+  
+  
+  .nav-item:hover::after{ 
+
+
+    background-color: #00bd9d;
+   
 
   }
+    
+  .nav-item:active::after{ 
 
- 
+
+    background-color: #00bd9d;
+   
+
+  }
+.nav-item::after {
+  content: "";
+  width: 9.5px;
+  height: 5.7rem;
+  background: #00bd9d;
+  clip-path: polygon(43% 5%, 100% 0, 100% 50%, 100% 100%, 43% 95%, 0% 49%);
+  background-color: transparent;
+  transition: .3s;
+}
+ /* .nav-link:hover .nav-item::after{
+  background-color: #00bd9d;
+ } */
     .nav-link.active{
      color: #00120B;
     
@@ -382,6 +419,7 @@ input[type="search"]::placeholder {
     color: #ffffff;
    margin-top: 2.4rem;
    transition: .3s;
+  
   }
    .go-pro-btn:hover{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -946,9 +984,9 @@ padding: 3.2rem 2.4rem;
 
 .debit-card-img{
   position: absolute;
-  top: -15.4rem;
-  left: 3.5rem;
-  width: 100%;
+  top: -12rem;
+
+  /* width: 100%; */
 }
 
 .add-card-btn{

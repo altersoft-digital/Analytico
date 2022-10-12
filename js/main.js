@@ -163,6 +163,10 @@ const data = {
       borderRadius: 9,
       textStrokeColor: "#00BD9D",
       hoverBackgroundColor: "#00BD9D",
+    
+      borderWidth: 1,
+      borderRadius: 8,
+      borderSkipped: false,
     },
   ],
 };
@@ -179,7 +183,7 @@ const tooltipLine = {
       ctx.moveTo(activePoint.element.x, chart.chartArea.top);
       ctx.lineTo(activePoint.element.x, activePoint.element.y);
       ctx.lineWidth = 2;
-      ctx.strokeStyle = "#00BD9D"; // "#D8E3E9"
+      ctx.strokeStyle = "#00BD9D"; 
       ctx.stroke();
       ctx.restore();
     }
