@@ -315,6 +315,7 @@ input[type="search"]::placeholder {
 
     }
         
+   
     /* .nav-item:hover{
     border-right: 1px solid red;
   
@@ -404,7 +405,9 @@ input[type="search"]::placeholder {
     .nav-link.active{
      color: #00120B;
     
-  }
+  } .nav-item.active::after{
+      background-color: #00bd9d;
+    }
   .nav-link:hover svg path{
     Fill: #00BD9D;
   }
