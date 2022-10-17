@@ -195,14 +195,12 @@ padding-top: 2rem;
   }
 
   .nav-open .icon-mobile-nav[name="menu-outline"] {
-    display: none;
+    display: none !important;
   }
   .nav-open .icon-mobile-nav[name="close-outline"] {
     display: block !important;
-    /* position: fixed; */
-    /* top: 0;
-    right: 0; */
-    /* padding: 2.1rem 3.8rem 0 0; */
+
+     z-index: 999;
   }
 
 
