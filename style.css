@@ -31,7 +31,7 @@ body {
   background: none;
   outline: none;
   transition: 0.2s ease-in-out;
-  cursor: pointer !important;
+  /* cursor: pointer !important; */
 }
 
 .secondary-text{
@@ -347,7 +347,7 @@ canvas {
 .transaction-section {
   grid-column: 1 / span 2;
   grid-row: 3;
-  max-width: 94.4rem;
+  /* max-width: 94.4rem; */
 }
 
 .transaction-bottom {
@@ -458,10 +458,10 @@ canvas {
   gap: 2.4rem;
 }
 
-.transaction-section table {
+/* .transaction-section table {
   overflow-x: scroll;
   overflow: auto;
-}
+} */
 
 /*,......................................................switch-btn.............................................*/
 /* label {
@@ -590,7 +590,7 @@ canvas {
 
 .transaction-section {
   background-color: #ffffff;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .transaction-top {
@@ -711,11 +711,13 @@ table tr {
 }
 
 .chart-table {
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 3.2rem;
-  width: 100%;
-  max-width: 94.4rem;
+  /* width: 100%;
+  max-width: 94.4rem; */
 }
 
 /*..............................................card-transactions...................................................*/
@@ -736,11 +738,12 @@ table tr {
   width: 100%;
 }
 
+
 .debit-card-img {
   position: absolute;
-  top: -12rem;
+  top: -16rem;
+  width: 100%;
 }
-
 .add-card-btn {
   width: 100%;
   border: 2px dotted rgba(0, 189, 157, 0.2);
@@ -844,7 +847,7 @@ table tr {
 .my-chart {
   display: block;
   box-sizing: border-box;
-  height: 472px;
+
   width: 100% !important;
 }
 
