@@ -332,16 +332,11 @@ canvas {
   grid-column: 1 / span 3;
   grid-row: 1;
 }
-.card-transactions {
-  grid-column: 3;
-  grid-row: 2 / span 2;
-  max-width: 52rem;
-}
 
 .balance-statistics {
   grid-column: 1 / span 2;
   grid-row: 2;
-  max-width: 94.4rem;
+  /* max-width: 94.4rem; */
 }
 
 .transaction-section {
@@ -349,11 +344,23 @@ canvas {
   grid-row: 3;
   /* max-width: 94.4rem; */
 }
+.card-transactions {
+  /* grid-column: 3;
+  grid-row: 2 / span 2;
+  max-width: 52rem; */
+
+    grid-column: 2;
+    grid-row: 1;
+    max-width: 52rem;
+
+}
 
 .transaction-bottom {
   gap: 3.2rem;
-  display: flex;
-  padding: 3.2rem 0 0;
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
 }
 .analytics-cards {
   display: flex;
@@ -424,26 +431,6 @@ canvas {
   cursor: pointer;
   }
   
-/*   
-.item1 {
-  grid-column: 1 / span 3;
-  grid-row: 1;
-}
-
-.item2 {
-  grid-column: 3;
-  grid-row: 2 / span 2;
-}
-.item4 {
-  grid-column: 1 / span 1;
-  grid-row: 3;
-  width: 100%;
-}
-.item3 {
-  grid-column: 1 / span 1;
-  grid-row: 2;
-
-} */
 
 
 canvas {
@@ -458,17 +445,9 @@ canvas {
   gap: 2.4rem;
 }
 
-/* .transaction-section table {
-  overflow-x: scroll;
-  overflow: auto;
-} */
 
 /*,......................................................switch-btn.............................................*/
-/* label {
-  font-size: 13px;
-  color: #424242;
-  font-weight: 500;
-} */
+
 
 .btn-color-mode-switch {
   display: inline-block;
@@ -851,21 +830,4 @@ table tr {
   box-sizing: border-box;
 
   width: 100% !important;
-}
-
-.btn-mobile-nav {
-  display: none;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.icon-mobile-nav {
-  height: 4.8rem;
-  width: 4.8rem;
-  color: #333;
-}
-
-.icon-mobile-nav[name="close-outline"] {
-  display: none;
 }

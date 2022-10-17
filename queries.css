@@ -90,24 +90,15 @@ padding-top: 2rem;
 
   width: 100%;
 }
-/* .header{
-    display: flex;
-    flex-direction: column;
-    gap: 3.2rem;
-} */
+
 .header{ 
     background-color: transparent;
 }
 .header-box {
-    /* grid-column: 1;
-    margin-top: 0; */
-    /* background-color: white; */
     display: flex;
     flex-direction: column;
   gap: 3rem;
 }
-
-
 
 .mobile-top{
     background-color: #ffffff;
@@ -116,7 +107,12 @@ padding-top: 2rem;
     justify-content: space-between;
     width: 100%;
     padding: 2rem 3rem;
+   
 }
+.mobile-nav{
+  z-index: 999;
+}
+
 .nav-right{
     display: flex;
     align-items: center;
@@ -173,35 +169,51 @@ padding-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in-out;
+     /* padding-right: 2rem; */
 
     opacity: 0;
 
     pointer-events: none;
     visibility: hidden;
+
+    z-index: 9;
   }
   .nav-open .side-nav-menu {
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
-    transform: translateX(0);
+    /* transform: translateX(0); */
 
     transition: all 600ms cubic-bezier(.62,.04,.3,1.56);
-    transition-delay: 100ms;
+    transition-delay: 50ms;
+  padding-right: 12rem;
+       transform: translateX(-400px);
+  display: flex;
+  justify-content:end;
 
-       transform: translateX(-250px);
+  }
+  .side-nav-list {
+
+    gap: 6.4rem;
+}
+body.blur {
+  transition: .5s;
+}
+  body.blur .main-section::before{
+    content: "";
+    position: fixed;
+    /* z-index: -1; */
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: 1;
+    background-color:rgba(149, 146, 146, 0.5);
+    backdrop-filter: blur(2px);
+    
+  }
  
-
-  }
-
-  .nav-open .icon-mobile-nav[name="menu-outline"] {
-    display: none !important;
-  }
-  .nav-open .icon-mobile-nav[name="close-outline"] {
-    display: block !important;
-
-     z-index: 999;
-  }
 
 
   
@@ -226,7 +238,67 @@ padding-top: 2rem;
     .profile-info{
       width: 100%;
     }
+ 
+     
+    
+   .header  .menu-icon .nav-icon {
+      background-color: rgb(22, 19, 19);
+      display: block;
+      height: 2px;
+      width: 25px;
+      position: relative;
   
+      transition: background 0.3s ease-out;
+    }
+    
+   .header   .menu-icon .nav-icon::before, .menu-icon .nav-icon::after {
+      background-color: rgb(22, 19, 19);
+  
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+  
+      transition: all ease-out 0.3s;
+    }
+    .header   .menu-icon .nav-icon::before {
+      top: 8px;
+    }
+    
+   .header  .menu-icon .nav-icon::after {
+      top: -8px;
+    }
+    
+    /* menu bar rotation */
+   .header  .menu-btn:checked ~ .menu-icon .nav-icon {
+      background-color: transparent;
+    }
+    
+   .header   .menu-btn:checked ~ .menu-icon .nav-icon::before {
+
+              transform: rotate(-45deg);
+      top: 0px;
+    }
+    
+  .header  .menu-btn:checked ~ .menu-icon .nav-icon::after {
+
+              transform: rotate(45deg);
+      top: 0px;
+    }
+    
+.menu-btn {
+ z-index: 99999;
+
+}
+
+
+
+  .nav-open ~ .menu-btn{
+z-index: 99999;
+ 
+
+  }
   }
   
 
@@ -235,10 +307,7 @@ padding-top: 2rem;
   html {
     font-size: 55%;
 }
-  .nav-open .side-nav-menu {
 
-    transform: translateX(-150px);
-}
   .transaction-bottom {
   width: 100%;
     display: flex;
@@ -333,6 +402,12 @@ gap: 2rem;
     html {
         font-size: 45%;
     }
+
+    .nav-open .side-nav-menu {
+    display: flex;
+    justify-content:center;
+  
+    }
     .card-transactions-container {
         display: grid;
         grid-template-columns: auto;
@@ -358,13 +433,19 @@ gap: 2rem;
    
   
     }
-    /* .card-transactions-container .top-side{
-        display: none;
-    } */
-    /* table{
-        width: 100%;
-    } */
 
+
+
+.btn-color-mode-switch .btn-color-mode-switch-inner {
+  width: 110px;
+  height: 25px;
+}
+
+
+.btn-color-mode-switch input[type="checkbox"]:checked
+  + .btn-color-mode-switch-inner:after {
+  left: 58px;
+}
   }
 
 

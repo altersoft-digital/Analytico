@@ -108,21 +108,12 @@ window.addEventListener('afterprint', () => {
 
 
 
-
-
-// $(document).ready(function () {
-//   $("#color_mode").on("change", function () {
-//     colorModePreview(this);
-//   });
-// });
-
-
-
-
-const MobileNavBtnEl = document.querySelector(".btn-mobile-nav");
+const body = document.querySelector("body");
+const MobileNavBtnEl = document.querySelector(".menu-btn");
 const headerEl = document.querySelector(".side-bar");
 MobileNavBtnEl.addEventListener("click", () => {
-  headerEl.classList.toggle("nav-open");
+  headerEl.classList.toggle("nav-open"); 
+  body.classList.toggle("blur");
 });
 
 
