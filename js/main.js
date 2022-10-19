@@ -114,6 +114,8 @@ const headerEl = document.querySelector(".side-bar");
 MobileNavBtnEl.addEventListener("click", () => {
   headerEl.classList.toggle("nav-open"); 
   body.classList.toggle("blur");
+  body.classList.toggle("hidden-overflow");
 });
+
 
 

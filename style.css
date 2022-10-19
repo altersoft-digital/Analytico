@@ -17,7 +17,10 @@ html {
   list-style: none;
   text-decoration: none;
 }
-
+.hidden-overflow {
+overflow-y: hidden;
+/* scroll-behavior: none; */
+}
 body {
   text-decoration: none;
   font-weight: 400;
@@ -31,7 +34,7 @@ body {
   background: none;
   outline: none;
   transition: 0.2s ease-in-out;
-  /* cursor: pointer !important; */
+  cursor: pointer !important;
 }
 
 .secondary-text{
@@ -182,6 +185,8 @@ input[type="search"]::placeholder {
 .main-section {
   display: grid;
   grid-template-columns: auto 5fr;
+  width: 100%;
+  display: grid;
 }
 
 /*...............................sidebar/.......................................*/
@@ -260,7 +265,7 @@ canvas {
   display: flex;
   align-items: center;
   gap: 2.4rem;
- 
+  font-size: 1.8rem;
   line-height: 2.3rem;
   color: #6b818c;
 
@@ -351,7 +356,8 @@ canvas {
 
     grid-column: 2;
     grid-row: 1;
-    max-width: 52rem;
+    /* max-width: 52rem; */
+
 
 }
 
@@ -363,8 +369,11 @@ canvas {
 
 }
 .analytics-cards {
-  display: flex;
+
+  display: grid;
   gap: 3.2rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
 }
 .analytics-card {
   /* border: 1px solid black; */
@@ -703,7 +712,7 @@ table tr {
 .card-transactions {
   background-color: #ffffff;
   margin-top: 18.2rem;
-  margin-bottom: 3.2rem;
+  margin-bottom: 5.2rem;
   position: relative;
   width: 100%;
 
@@ -728,7 +737,7 @@ table tr {
 .add-card-btn {
   width: 100%;
   border: 2px dotted rgba(0, 189, 157, 0.2);
-  margin-top: 17.4rem;
+  margin-top: 32%;
   border-radius: 1.2rem;
   background-color: transparent;
   color: #00bd9d;
