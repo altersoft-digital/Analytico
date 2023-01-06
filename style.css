@@ -733,6 +733,7 @@ table tr {
   position: absolute;
   top: -16rem;
   width: 100%;
+  left: 1rem;
 }
 .add-card-btn {
   width: 100%;
